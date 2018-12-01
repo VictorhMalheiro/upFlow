@@ -1,0 +1,7 @@
+efone` VARCHAR(45) NOT NULL,
+  `user_facebook_funcionario` VARCHAR(45) NOT NULL,
+  `user_instagram_funcionario` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  `user_funcionario` VARCHAR(45) NOT NULL,
+  `code_empresa` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idfuncionario_empresa`)
