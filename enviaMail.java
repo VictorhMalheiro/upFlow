@@ -16,7 +16,7 @@ public class enviaMail
       public static void main(String[] args) {
       
        Properties props = new Properties();
-            /** Par‚metros de conex„o com servidor Gmail */
+            /** Par√¢metros de conex√£o com servidor Gmail */
             props.put("mail.smtp.host", "mail.virtualmake.net");
             props.put("mail.smtp.socketFactory.port", "465");
             props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
@@ -27,11 +27,11 @@ public class enviaMail
                         new javax.mail.Authenticator() {
                              protected PasswordAuthentication getPasswordAuthentication() 
                              {
-                                   return new PasswordAuthentication("victor@virtualmake.net", "web456vhm8833");
+                                   return new PasswordAuthentication("victor@virtualmake.net", "");
                              }
                         });
  
-            /** Ativa Debug para sess„o */
+            /** Ativa Debug para sess√£o */
             session.setDebug(true);
  
             try {
@@ -39,13 +39,13 @@ public class enviaMail
                   Message message = new MimeMessage(session);
                   message.setFrom(new InternetAddress("victor@virtualmake.net")); //Remetente
  
-                  Address[] toUser = InternetAddress //Destinat·rio(s)
+                  Address[] toUser = InternetAddress //Destinat√°rio(s)
                              .parse("brunoantonio99@outlook.com.br,vicmalheiro@gmail.com");  
  
                   message.setRecipients(Message.RecipientType.TO, toUser);
                   message.setSubject("Java Email");//Assunto
                   message.setText("Teste enviando email no Java");
-                  /**MÈtodo para enviar a mensagem criada*/
+                  /**M√©todo para enviar a mensagem criada*/
                   Transport.send(message);
  
                   System.out.println("Feito!!!");
